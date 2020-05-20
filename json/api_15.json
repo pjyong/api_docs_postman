@@ -1,0 +1,44 @@
+{
+	"info": {
+		"_postman_id": "43cfd2e2-c58d-4e23-865f-19856c1bfb55",
+		"name": "yichang_sinopec",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "用户\b信息",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ0ZXN0IiwianRpIjoiNTYwOTU1NDUzZGE1YTU2ZTdmMjg0ZGU4NTAyZjVhMjY0MGRmYmRlZTJkOTJlMmRmYjNiMjRmOTUxMzI3YWIzODg2NWUxM2M2MjAxYjQxZmUiLCJpYXQiOjE1ODczNzQxNjIsIm5iZiI6MTU4NzM3NDE2MiwiZXhwIjoxNTg3Mzc3NzYyLCJzdWIiOiIiLCJzY29wZXMiOltdfQ.FXC-GCvg7m2OdPwQp864J9qvITkeeVP9UIKayM0DoWzxioMOjKf01WKxEhbZZmOMKg8dKoLiPm4WeFodiW1e8wA-XvvaJ8VaLNw6sJsaYCJvvEot4rpUurn9cv9UsQIGewbhlznhPpgsc3epTRuhNQGi1kW_kfhiH4xuOmUoHl1a8fs3ADny1CCWhUo3kikzvM55sLRrSYShuG8kmNZW1xFLL5fLpZZOoi1j-Qk9MXwsCne8vnLsKNil2H-_wQ-gDgLPEFeMIfVvRHVsw3oBurjfUGTZI1USS1UoC1du56y48zPjPOWn3NDjKRqmF8Z7GSkcOi3tDJCFWosMezBPeg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:18306/getStructure?nonOil=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "18306",
+					"path": [
+						"getStructure"
+					],
+					"query": [
+						{
+							"key": "nonOil",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
