@@ -8,5 +8,5 @@
 * 支持接口历史版本浏览
 
 
-![screenshot](images/a2.jpg)
+![screenshot](images/a3.jpg)
 ![screenshot](images/a1.jpg)

@@ -1,0 +1,62 @@
+{
+	"info": {
+		"_postman_id": "d3ed55e4-acf7-4429-81c9-7eb3888c097f",
+		"name": "商城 copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "修改收货人",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJtYWxsIiwianRpIjoiNTFmYjViODQxZmY0MzIzOTVlY2NmZmQ3OTRjYTM0NTNhN2MyMzdkYTcxNzc0NDIyN2JkM2FjMDU5Yjk0ODJlZTIxZmExODg4YjExNWVlNDciLCJpYXQiOjE1ODk4NTE2NjIsIm5iZiI6MTU4OTg1MTY2MiwiZXhwIjoxNTg5ODU1MjYxLCJzdWIiOiIxIiwic2NvcGVzIjpbInVzZXJfbG9naW4iXX0.Y82SHFf0RMDOBODilwEmhQMaOCDGyA7F-S5dxS2FtBHhE8WyIJPfEfTP7BQMKKtwMsY42jLsDyZBB98Yw2JTyuEAnnxWQngCx6_lTGAW2LnjCgbI6TqEX6bewEXufMNm6gyGFSlQHlAmvIyuhE-hQLSFblTlBcx59Z696HouL8TESPSStfU6hXmskIwzM6X6xvEMwgWcxSEW6qpiYA4hr6_SeWlfbKhFQHYPayVbOByzDbNXGcDPHGuz8T64AFgXxiZG_1cFFOS_lZY6-PGxCdfHij5F5dM39Bloay66w0EXeeJsqjuxbIyHs9rZyeRoUzLiNbqErjzXZLBJKzfLtQ"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "zenglingcheng",
+							"type": "text"
+						},
+						{
+							"key": "mobile",
+							"value": "18272257948",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://shopping.yrxsy.com/post/updatecontacts",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"30",
+						"201"
+					],
+					"port": "18666",
+					"path": [
+						"post",
+						"updatecontacts"
+					]
+				},
+				"description": "12312"
+			},
+			"response": []
+		}
+	]
+}
