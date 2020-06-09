@@ -15,8 +15,15 @@ import (
 )
 
 var (
-	apiServerUrl string = "https://shopping.yrxsy.com/"
-	apiServerUrlParts = []string{"shopping", "yrxsy", "com"}
+	// 卖菜的
+	//apiServerUrl string = "https://shopping.yrxsy.com/"
+	//apiServerUrlParts = []string{"shopping", "yrxsy", "com"}
+	//apiPort = "3001"
+
+	// 旅游+加油
+	apiServerUrl string = "https://api.cheyuu.com/"
+	apiServerUrlParts = []string{"api", "cheyuu", "com"}
+	apiPort = "3002"
 )
 
 // postman json
@@ -200,6 +207,8 @@ func upload(w http.ResponseWriter, r *http.Request){
 		info.Item[index].Request.Url.Raw = re.ReplaceAllString(info.Item[index].Request.Url.Raw, apiServerUrl)
 	}
 	if force == "false"{
+		fmt.Println("开始合并")
+
 		// 取出服务器最近一个版本和当前版本比较内容，合并
 		// 获取老版本的
 		maxVersionContent, _ := ioutil.ReadFile("./json/api_"+strconv.Itoa(maxVersion)+".json")
@@ -228,7 +237,7 @@ func upload(w http.ResponseWriter, r *http.Request){
 			return
 		}
 		// 再json化
-		b, err := json.MarshalIndent(info, "", "\t")
+		b, err := json.MarshalIndent(oldInfo, "", "\t")
 		if err != nil{
 			fmt.Println(err)
 			io.WriteString(w, generateResp("json failed", true))
@@ -236,6 +245,7 @@ func upload(w http.ResponseWriter, r *http.Request){
 		}
 		ioutil.WriteFile("./json/api_"+strconv.Itoa(maxVersion+1)+".json", b, 0644)
 	}else{
+		fmt.Println("开始覆盖")
 		// 再json化
 		b, err := json.MarshalIndent(info, "", "\t")
 		if err != nil{
@@ -262,5 +272,5 @@ func main(){
 	http.HandleFunc("/json", get)
 	//http.Handle("/json/", http.StripPrefix("/json/", http.FileServer(http.Dir("./json"))))
 	http.Handle("/", http.FileServer(http.Dir("./template")))
-	http.ListenAndServe(":3001", nil)
+	http.ListenAndServe(":"+apiPort, nil)
 }
